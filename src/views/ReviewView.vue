@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { useLessonSession } from '../composables/useLessonSession'
-import { commentProducts, getClipTitle } from '../data/steps'
+import { getClipTitle } from '../data/steps'
 
 const router = useRouter()
 const session = useLessonSession()
@@ -18,15 +18,6 @@ const selectedBranches = computed(() => {
       return { step, branch }
     })
     .filter(Boolean) as { step: (typeof session.steps.value)[number]; branch: NonNullable<(typeof session.steps.value)[number]['branches']>[number] }[]
-})
-
-/** 本次涉及的课代表产品统计 */
-const productsUsed = computed(() => {
-  const keys = session.steps.value
-    .map((s) => s.productKey)
-    .filter((k): k is string => !!k)
-  const count = keys.reduce((acc, k) => acc + (commentProducts[k]?.length ?? 0), 0)
-  return count
 })
 
 function saveDraft() {

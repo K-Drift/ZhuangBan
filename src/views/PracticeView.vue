@@ -5,7 +5,6 @@ import PracticePlayer from '../components/PracticePlayer.vue'
 import BranchChooser from '../components/BranchChooser.vue'
 import ProductList from '../components/ProductList.vue'
 import { useLessonSession } from '../composables/useLessonSession'
-import { getClipTitle } from '../data/steps'
 
 const route = useRoute()
 const router = useRouter()
@@ -23,7 +22,6 @@ const activeGuide = computed(() => session.currentGuide.value)
 const hasBranches = computed(
   () => !!practiceStep.value.branches && practiceStep.value.branches.length > 0,
 )
-const branchSelections = computed(() => session.branchSelections.value)
 
 function applyStepQuery() {
   const raw = route.query.step
