@@ -230,6 +230,19 @@ button {
   box-shadow: var(--s);
 }
 
+.btn-primary-lg {
+  width: 100%;
+  border-radius: 20px;
+  padding: 20px;
+  background: linear-gradient(135deg, var(--r), var(--r2));
+  color: white;
+  font-weight: 900;
+  font-size: 17px;
+  box-shadow: 0 12px 32px rgba(244, 63, 94, 0.3);
+  margin-top: 16px;
+  letter-spacing: 0.02em;
+}
+
 .input {
   background: #fff1f2;
   border-radius: 18px;

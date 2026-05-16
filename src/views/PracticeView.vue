@@ -107,9 +107,7 @@ function onBranchSelect(branchId: string) {
 
     <ProductList :product-key="practiceStep.productKey" />
 
-    <button type="button" class="btn btn3" style="margin-top: 4px">🎙 语音指导（占位）</button>
-
-    <button type="button" class="btn btn2" @click="completeAndNext">
+    <button type="button" class="btn btn-primary-lg" @click="completeAndNext">
       {{
         isLastStep ? '完成本课，生成复盘 ✓' : '我完成了，进入下一步 ✓'
       }}

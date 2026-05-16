@@ -28,10 +28,5 @@
       </aside>
     </div>
     <slot name="nav" />
-    <footer class="tip-footer">
-      本地运行：<code>npm install &amp;&amp; npm run dev</code>；视频文件在
-      <code>public/videos/</code>
-      目录下。
-    </footer>
   </div>
 </template>
