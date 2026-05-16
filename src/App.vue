@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Analytics } from '@vercel/analytics/vue'
 import AppShell from './components/AppShell.vue'
 import BottomNav from './components/BottomNav.vue'
 import LessonHydrate from './components/LessonHydrate.vue'
@@ -9,6 +10,7 @@ provideLessonSession()
 </script>
 
 <template>
+  <Analytics />
   <AppShell>
     <PhoneFrame>
       <LessonHydrate />
